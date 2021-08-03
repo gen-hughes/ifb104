@@ -199,7 +199,47 @@ def release_drawing_canvas(hide_cursor = True):
 
 # All of your code goes in, or is called from, this function
 def track_entities(replace_me):
-    pass
+    #variables
+    side_margin = cell_size*4 + cell_size/1.5
+    top_margin = cell_size/2
+
+    ##first square
+    goto(-side_margin,top_margin)
+    pendown()
+    color('black','yellow')
+    begin_fill()
+    #draw square
+    for i in range(4):
+        left(90)
+        forward(cell_size)
+    end_fill()
+    penup()
+    forward(20)
+    color('black')
+    begin_fill()
+    left(90)
+    forward(50)
+    left(90)
+    forward(20)
+    left(90)
+    forward(50)
+    end_fill()
+
+    # penup()
+    # home()
+
+    # #second square
+    # goto(-side_margin,-top_margin)
+
+    # pendown()
+    # #draw square
+    # for i in range(4):
+    #     left(90)
+    #     forward(cell_size)
+    # pass
+    # penup()
+    # home()
+
 
 #
 #--------------------------------------------------------------------#
