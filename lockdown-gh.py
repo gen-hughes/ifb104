@@ -203,8 +203,11 @@ def track_entities(replace_me):
     side_margin = cell_size*4 + cell_size/1.5
     top_margin = cell_size/2
 
+    x_pos_one = -side_margin
+    y_pos_one = top_margin
+
     ##first square
-    goto(-side_margin,top_margin)
+    goto(x_pos_one,y_pos_one)
     pendown()
     color('black','yellow')
     begin_fill()
@@ -214,7 +217,10 @@ def track_entities(replace_me):
         forward(cell_size)
     end_fill()
     penup()
-    forward(20)
+
+    #asterix
+    goto(x_pos_one,y_pos_one)
+    backward(50)
     color('black')
     begin_fill()
     left(90)
