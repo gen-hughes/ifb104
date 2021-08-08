@@ -232,8 +232,8 @@ def track_entities(replace_me):
     #head level
     draw_y_pos_one = y_pos_one + 30
     #hat coords
-    draw_x_pos_three = x_pos_one + 45
-    draw_y_pos_two = y_pos_one + 46
+    draw_x_pos_three = x_pos_one + 85
+    draw_y_pos_two = y_pos_one + 62
 
 
     #-----------body dimensions-----------#
@@ -318,16 +318,19 @@ def track_entities(replace_me):
 
     #hat
     goto(draw_x_pos_three,draw_y_pos_two)
-    setheading(0)
-    left(-90)
+    right(-90)
     pendown()
     pencolor(outline)
     fillcolor(cb_hat)
     begin_fill()
     circle(cb_hat_rad,180)
     end_fill()
+    #hat line
+    goto(draw_x_pos_three,draw_y_pos_two)
+    setheading(0)
+    pencolor(outline)
+    forward(75)
     penup()
-
 
 
     #-----------charlie brown two----------#
