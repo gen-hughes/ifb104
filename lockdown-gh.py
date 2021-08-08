@@ -200,51 +200,106 @@ def release_drawing_canvas(hide_cursor = True):
 # All of your code goes in, or is called from, this function
 def track_entities(replace_me):
     #variables
+    #goes backwards past the four cells horizontally, and adds some extra space
     side_margin = cell_size*4 + cell_size/1.5
+    #goes up half a cell
     top_margin = cell_size/2
 
-    x_pos_one = -side_margin
+    #setting the coordinates to be changed easily
+    #the x position has the cell_size subtracted so that the turtle ends up in the bottom left hand corner of the square
+    x_pos_one = -side_margin - cell_size
     y_pos_one = top_margin
+    y_pos_two = -top_margin - cell_size
+    x_pos_two = side_margin + cell_size/4
+
+    draw_x_pos_one = x_pos_one + 25
+    draw_x_pos_two = x_pos_one + 15
+    #variables
+        #asterix
+    a_height = 50
+    a_width = 45
+    a_body_height = y_pos_one + a_height
+
+    #square function
+    def square(length):
+        for i in range(4):
+            forward(length)
+            left(90)
+
+    #ellipse function
+    def ellipse(rad):
+        for i in range(2):
+            circle(rad,90)
+            circle(rad//2,90)
+        #tilting the shape
+        seth(-45)
+
+    #little triangles for shirt
+    def triangle(num):
+        setheading(0)
+        for i in range(num):
+            left(45)
+            forward(10)
+            right(90)
+            forward(10)
+            setheading(0)
+        goto(draw_x_pos_two,y_pos_one)
 
     ##first square
     goto(x_pos_one,y_pos_one)
     pendown()
-    color('black','yellow')
+    color('black','orange')
     begin_fill()
     #draw square
-    for i in range(4):
-        left(90)
-        forward(cell_size)
+    square(cell_size)
     end_fill()
     penup()
 
-    #asterix
-    goto(x_pos_one,y_pos_one)
-    backward(50)
+    #charlie body
+    goto(draw_x_pos_two,y_pos_one)
+    pendown()
+    color('yellow')
+    begin_fill()
+    right(90)
+    circle(35,-180)
+    end_fill()
+    penup()
+
+    #stripes
+    goto(draw_x_pos_two,y_pos_one)
+    pendown()
     color('black')
     begin_fill()
-    left(90)
-    forward(50)
-    left(90)
-    forward(20)
-    left(90)
-    forward(50)
+    triangle(5)
     end_fill()
+    penup()
 
-    # penup()
-    # home()
+    #second square
+    goto(x_pos_one,y_pos_two)
+    pendown()
+    begin_fill()
+    color('red')
+    square(cell_size)
+    end_fill()
+    penup()
 
-    # #second square
-    # goto(-side_margin,-top_margin)
+    #third square
+    goto(x_pos_two,y_pos_one)
+    pendown()
+    begin_fill()
+    color('green')
+    square(cell_size)
+    end_fill()
+    penup()
 
-    # pendown()
-    # #draw square
-    # for i in range(4):
-    #     left(90)
-    #     forward(cell_size)
-    # pass
-    # penup()
-    # home()
+    #fourth square
+    goto(x_pos_two,y_pos_two)
+    pendown()
+    begin_fill()
+    color('blue')
+    square(cell_size)
+    end_fill()
+    penup()
 
 
 #
