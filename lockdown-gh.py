@@ -199,7 +199,20 @@ def release_drawing_canvas(hide_cursor = True):
 
 # All of your code goes in, or is called from, this function
 def track_entities(replace_me):
-    #variables
+    #-------------variables-------------------#
+
+    #------------colours----------------#
+    # box_one = 'orange'
+    # box_two = 'red'
+    # box_three = 'green'
+    # box_four = 'blue'
+    # cb_shirt = 'yellow'
+    outline = 'black'
+    cb_body = '#FFDAB9'
+    cb_hat = 'white'
+
+    #------------positioning---------------#
+    #edge of boxes
     #goes backwards past the four cells horizontally, and adds some extra space
     side_margin = cell_size*4 + cell_size/1.5
     #goes up half a cell
@@ -212,16 +225,29 @@ def track_entities(replace_me):
     y_pos_two = -top_margin - cell_size
     x_pos_two = side_margin + cell_size/4
 
-    draw_x_pos_one = x_pos_one + 25
+    #----------drawing coordinates----------#
+    draw_x_pos_one = x_pos_one + 50
+    #where cb body starts
     draw_x_pos_two = x_pos_one + 15
-    #variables
-        #asterix
-    a_height = 50
-    a_width = 45
-    a_body_height = y_pos_one + a_height
+    #head level
+    draw_y_pos_one = y_pos_one + 30
+    #hat coords
+    draw_x_pos_three = x_pos_one + 45
+    draw_y_pos_two = y_pos_one + 46
 
+
+    #-----------body dimensions-----------#
+    #variables
+        #cb
+    cb_body_rad = 35
+    cb_head_rad = 32
+    cb_hat_rad = 35
+
+
+    #----------functions----------#
     #square function
     def square(length):
+        setheading(0)
         for i in range(4):
             forward(length)
             left(90)
@@ -245,6 +271,12 @@ def track_entities(replace_me):
             setheading(0)
         goto(draw_x_pos_two,y_pos_one)
 
+
+
+    #-----------drawing-----------#
+
+    #-----------charlie brown one----------#
+
     ##first square
     goto(x_pos_one,y_pos_one)
     pendown()
@@ -258,10 +290,10 @@ def track_entities(replace_me):
     #charlie body
     goto(draw_x_pos_two,y_pos_one)
     pendown()
-    color('yellow')
+    color('black','yellow')
     begin_fill()
     right(90)
-    circle(35,-180)
+    circle(cb_body_rad,-180)
     end_fill()
     penup()
 
@@ -274,29 +306,59 @@ def track_entities(replace_me):
     end_fill()
     penup()
 
+    #head
+    goto(draw_x_pos_one,draw_y_pos_one)
+    pendown()
+    pencolor(outline)
+    fillcolor(cb_body)
+    begin_fill()
+    circle(cb_head_rad)
+    end_fill()
+    penup()
+
+    #hat
+    goto(draw_x_pos_three,draw_y_pos_two)
+    setheading(0)
+    left(-90)
+    pendown()
+    pencolor(outline)
+    fillcolor(cb_hat)
+    begin_fill()
+    circle(cb_hat_rad,180)
+    end_fill()
+    penup()
+
+
+
+    #-----------charlie brown two----------#
     #second square
     goto(x_pos_one,y_pos_two)
     pendown()
     begin_fill()
-    color('red')
+    color('black','red')
     square(cell_size)
     end_fill()
     penup()
 
+
+
+
+    #-----------snoopy one----------#
     #third square
     goto(x_pos_two,y_pos_one)
     pendown()
     begin_fill()
-    color('green')
+    color('black','green')
     square(cell_size)
     end_fill()
     penup()
 
+    #-----------snoopy two----------#
     #fourth square
     goto(x_pos_two,y_pos_two)
     pendown()
     begin_fill()
-    color('blue')
+    color('black','blue')
     square(cell_size)
     end_fill()
     penup()
