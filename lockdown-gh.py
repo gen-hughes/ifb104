@@ -212,6 +212,8 @@ def track_entities(replace_me):
     cb_hat = 'white'
     cb_bag = '#a37e5d'
     
+    #-------initialising-----------#
+    width(3)
 
     #------------positioning---------------#
     #edge of boxes
@@ -228,13 +230,13 @@ def track_entities(replace_me):
     x_pos_two = side_margin + cell_size/4
 
     #----------drawing coordinates----------#
-    draw_x_pos_one = x_pos_one + 50
+    draw_x_pos_one = x_pos_one + 40
     #where cb body starts
-    draw_x_pos_two = x_pos_one + 15
+    draw_x_pos_two = x_pos_one + 5
     #head level
     draw_y_pos_one = y_pos_one + 30
     #hat coords
-    draw_x_pos_three = x_pos_one + 85
+    draw_x_pos_three = x_pos_one + 75
     draw_y_pos_two = y_pos_one + 62
 
     #text
@@ -245,8 +247,8 @@ def track_entities(replace_me):
     #cb hat
     draw_y_pos_three = y_pos_two + 30
     #eyes
-    dot_x_pos_one = x_pos_one + 40
-    dot_y_pos_one = y_pos_two + 70
+    dot_x_pos_one = x_pos_one + 30
+    dot_y_pos_one = y_pos_two + 65
     dot_x_pos_two = dot_x_pos_one + 20
 
     #-----------body dimensions-----------#
@@ -284,8 +286,6 @@ def track_entities(replace_me):
             right(90)
             forward(10)
             setheading(0)
-
-
 
     #-----------drawing-----------#
 
@@ -345,9 +345,14 @@ def track_entities(replace_me):
     end_fill()
     #hat line
     goto(draw_x_pos_three,draw_y_pos_two)
+    penup()
+    setheading(180)
+    forward(cb_hat_rad*2)
     setheading(0)
+    pendown()
+    width(3)
+    forward(cb_hat_rad*2+20)
     pencolor(outline)
-    forward(75)
     penup()
 
 
@@ -362,7 +367,7 @@ def track_entities(replace_me):
     penup()
 
     #body (same design but red)
-    goto(draw_x_pos_four,y_pos_two)
+    goto(draw_x_pos_two,y_pos_two)
     pendown()
     color('black','red')
     begin_fill()
@@ -372,7 +377,7 @@ def track_entities(replace_me):
     penup()
 
     #stripes
-    goto(draw_x_pos_four,y_pos_two)
+    goto(draw_x_pos_two,y_pos_two)
     pendown()
     color('black')
     begin_fill()
