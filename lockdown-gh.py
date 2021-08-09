@@ -203,13 +203,15 @@ def track_entities(replace_me):
 
     #------------colours----------------#
     # box_one = 'orange'
-    # box_two = 'red'
+    box_two = '#a2f1a2'
     # box_three = 'green'
     # box_four = 'blue'
     # cb_shirt = 'yellow'
     outline = 'black'
     cb_body = '#FFDAB9'
     cb_hat = 'white'
+    cb_bag = '#a37e5d'
+    
 
     #------------positioning---------------#
     #edge of boxes
@@ -235,14 +237,27 @@ def track_entities(replace_me):
     draw_x_pos_three = x_pos_one + 85
     draw_y_pos_two = y_pos_one + 62
 
+    #text
+    text_y_pos_one = y_pos_one + 2*cell_size
+
+    #cb two
+    draw_x_pos_four = x_pos_one+15
+    #cb hat
+    draw_y_pos_three = y_pos_two + 30
+    #eyes
+    dot_x_pos_one = x_pos_one + 40
+    dot_y_pos_one = y_pos_two + 70
+    dot_x_pos_two = dot_x_pos_one + 20
 
     #-----------body dimensions-----------#
     #variables
-        #cb
+        #cb one
     cb_body_rad = 35
     cb_head_rad = 32
     cb_hat_rad = 35
-
+        #cb two
+    cb_bag_height = 65
+    cb_bag_width = 35
 
     #----------functions----------#
     #square function
@@ -269,13 +284,16 @@ def track_entities(replace_me):
             right(90)
             forward(10)
             setheading(0)
-        goto(draw_x_pos_two,y_pos_one)
 
 
 
     #-----------drawing-----------#
 
     #-----------charlie brown one----------#
+
+    goto(x_pos_one,text_y_pos_one)
+    style = ('Courier', 10)
+    write('Charlie Brown', font=style, align='center')
 
     ##first square
     goto(x_pos_one,y_pos_one)
@@ -338,12 +356,52 @@ def track_entities(replace_me):
     goto(x_pos_one,y_pos_two)
     pendown()
     begin_fill()
-    color('black','red')
+    color('black',box_two)
     square(cell_size)
     end_fill()
     penup()
 
+    #body (same design but red)
+    goto(draw_x_pos_four,y_pos_two)
+    pendown()
+    color('black','red')
+    begin_fill()
+    right(90)
+    circle(cb_body_rad,-180)
+    end_fill()
+    penup()
 
+    #stripes
+    goto(draw_x_pos_four,y_pos_two)
+    pendown()
+    color('black')
+    begin_fill()
+    triangle(5)
+    end_fill()
+    penup()
+
+    #bag
+    color(outline,cb_bag)
+    goto(draw_x_pos_two,draw_y_pos_three)
+    pendown()
+    begin_fill()
+    setheading(0)
+    left(75)
+    forward(cb_bag_height)
+    setheading(0)
+    forward(cb_bag_width)
+    right(75)
+    forward(cb_bag_height)
+    goto(draw_x_pos_two,draw_y_pos_three)
+    end_fill()
+    penup()
+
+    #eyes
+    goto(dot_x_pos_one,dot_y_pos_one)
+    dot(15,outline)
+    goto(dot_x_pos_two,dot_y_pos_one)
+    dot(15,outline)
+    
 
 
     #-----------snoopy one----------#
