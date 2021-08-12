@@ -263,19 +263,23 @@ def track_entities(replace_me):
 
     #----------functions----------#
     #square function
-    def square(length):
+    def square(length,colour):
+        begin_fill()
+        color('black', colour)
         setheading(0)
         for i in range(4):
             forward(length)
             left(90)
+        end_fill()
 
     #ellipse function
-    def ellipse(rad):
+    def ellipse(rad,heading):
+        setheading(0)
         for i in range(2):
             circle(rad,90)
             circle(rad//2,90)
         #tilting the shape
-        seth(-45)
+        seth(heading)
 
     #little triangles for shirt
     def triangle(num):
@@ -286,6 +290,17 @@ def track_entities(replace_me):
             right(90)
             forward(10)
             setheading(0)
+
+    def rectangle(length,width,colour):
+        setheading(0)
+        begin_fill()
+        color(outline,colour)
+        for i in range(2):
+            forward(length)
+            left(90)
+            forward(width)
+            left(90)
+        end_fill()
 
     #-----------drawing-----------#
 
@@ -298,11 +313,7 @@ def track_entities(replace_me):
     ##first square
     goto(x_pos_one,y_pos_one)
     pendown()
-    color('black','orange')
-    begin_fill()
-    #draw square
-    square(cell_size)
-    end_fill()
+    square(cell_size, 'orange')
     penup()
 
     #charlie body
@@ -360,10 +371,8 @@ def track_entities(replace_me):
     #second square
     goto(x_pos_one,y_pos_two)
     pendown()
-    begin_fill()
-    color('black',box_two)
-    square(cell_size)
-    end_fill()
+    pendown()
+    square(cell_size, box_two)
     penup()
 
     #body (same design but red)
@@ -413,22 +422,40 @@ def track_entities(replace_me):
     #third square
     goto(x_pos_two,y_pos_one)
     pendown()
-    begin_fill()
-    color('black','green')
-    square(cell_size)
-    end_fill()
+    square(cell_size, 'green')
     penup()
+
+    #plane
+    # pendown()
+    # rectangle(cell_size,40,'red')
+    # penup()
+
+    #plane
+    pendown()
+    setheading(0)
+    begin_fill()
+    color(outline,'red')
+    forward(cell_size)
+    left(90)
+    forward(40)
+    left(90)
+    forward(cell_size/3)
+    right(90)
+    circle(cell_size/3,-180)
+    forward(cell_size/3)
+    left(90)
+    forward(40)
+    end_fill()
+
+    #body
+
 
     #-----------snoopy two----------#
     #fourth square
     goto(x_pos_two,y_pos_two)
     pendown()
-    begin_fill()
-    color('black','blue')
-    square(cell_size)
-    end_fill()
+    square(cell_size, 'blue')
     penup()
-
 
 #
 #--------------------------------------------------------------------#
