@@ -251,6 +251,13 @@ def track_entities(replace_me):
     dot_y_pos_one = y_pos_two + 65
     dot_x_pos_two = dot_x_pos_one + 20
 
+    #snoopy one
+    snoopy_x_one = x_pos_two + cell_size/4 + 5
+    snoopy_y_one = y_pos_one + 35
+    #head pos
+    snoopy_x_two = x_pos_two + 20
+    snoopy_y_two = y_pos_one + 60
+
     #-----------body dimensions-----------#
     #variables
         #cb one
@@ -274,12 +281,10 @@ def track_entities(replace_me):
 
     #ellipse function
     def ellipse(rad,heading):
-        setheading(0)
+        seth(heading)
         for i in range(2):
             circle(rad,90)
             circle(rad//2,90)
-        #tilting the shape
-        seth(heading)
 
     #little triangles for shirt
     def triangle(num):
@@ -306,115 +311,115 @@ def track_entities(replace_me):
 
     #-----------charlie brown one----------#
 
-    goto(x_pos_one,text_y_pos_one)
-    style = ('Courier', 10)
-    write('Charlie Brown', font=style, align='center')
+    # goto(x_pos_one,text_y_pos_one)
+    # style = ('Courier', 10)
+    # write('Charlie Brown', font=style, align='center')
 
-    ##first square
-    goto(x_pos_one,y_pos_one)
-    pendown()
-    square(cell_size, 'orange')
-    penup()
+    # ##first square
+    # goto(x_pos_one,y_pos_one)
+    # pendown()
+    # square(cell_size, 'orange')
+    # penup()
 
-    #charlie body
-    goto(draw_x_pos_two,y_pos_one)
-    pendown()
-    color('black','yellow')
-    begin_fill()
-    right(90)
-    circle(cb_body_rad,-180)
-    end_fill()
-    penup()
+    # #charlie body
+    # goto(draw_x_pos_two,y_pos_one)
+    # pendown()
+    # color('black','yellow')
+    # begin_fill()
+    # right(90)
+    # circle(cb_body_rad,-180)
+    # end_fill()
+    # penup()
 
-    #stripes
-    goto(draw_x_pos_two,y_pos_one)
-    pendown()
-    color('black')
-    begin_fill()
-    triangle(5)
-    end_fill()
-    penup()
+    # #stripes
+    # goto(draw_x_pos_two,y_pos_one)
+    # pendown()
+    # color('black')
+    # begin_fill()
+    # triangle(5)
+    # end_fill()
+    # penup()
 
-    #head
-    goto(draw_x_pos_one,draw_y_pos_one)
-    pendown()
-    pencolor(outline)
-    fillcolor(cb_body)
-    begin_fill()
-    circle(cb_head_rad)
-    end_fill()
-    penup()
+    # #head
+    # goto(draw_x_pos_one,draw_y_pos_one)
+    # pendown()
+    # pencolor(outline)
+    # fillcolor(cb_body)
+    # begin_fill()
+    # circle(cb_head_rad)
+    # end_fill()
+    # penup()
 
-    #hat
-    goto(draw_x_pos_three,draw_y_pos_two)
-    right(-90)
-    pendown()
-    pencolor(outline)
-    fillcolor(cb_hat)
-    begin_fill()
-    circle(cb_hat_rad,180)
-    end_fill()
-    #hat line
-    goto(draw_x_pos_three,draw_y_pos_two)
-    penup()
-    setheading(180)
-    forward(cb_hat_rad*2)
-    setheading(0)
-    pendown()
-    width(3)
-    forward(cb_hat_rad*2+20)
-    pencolor(outline)
-    penup()
+    # #hat
+    # goto(draw_x_pos_three,draw_y_pos_two)
+    # right(-90)
+    # pendown()
+    # pencolor(outline)
+    # fillcolor(cb_hat)
+    # begin_fill()
+    # circle(cb_hat_rad,180)
+    # end_fill()
+    # #hat line
+    # goto(draw_x_pos_three,draw_y_pos_two)
+    # penup()
+    # setheading(180)
+    # forward(cb_hat_rad*2)
+    # setheading(0)
+    # pendown()
+    # width(3)
+    # forward(cb_hat_rad*2+20)
+    # pencolor(outline)
+    # penup()
 
 
-    #-----------charlie brown two----------#
-    #second square
-    goto(x_pos_one,y_pos_two)
-    pendown()
-    pendown()
-    square(cell_size, box_two)
-    penup()
+    # #-----------charlie brown two----------#
+    # #second square
+    # goto(x_pos_one,y_pos_two)
+    # pendown()
+    # pendown()
+    # square(cell_size, box_two)
+    # penup()
 
-    #body (same design but red)
-    goto(draw_x_pos_two,y_pos_two)
-    pendown()
-    color('black','red')
-    begin_fill()
-    right(90)
-    circle(cb_body_rad,-180)
-    end_fill()
-    penup()
+    # #body (same design but red)
+    # goto(draw_x_pos_two,y_pos_two)
+    # pendown()
+    # color('black','red')
+    # begin_fill()
+    # right(90)
+    # circle(cb_body_rad,-180)
+    # end_fill()
+    # penup()
 
-    #stripes
-    goto(draw_x_pos_two,y_pos_two)
-    pendown()
-    color('black')
-    begin_fill()
-    triangle(5)
-    end_fill()
-    penup()
+    # #stripes
+    # goto(draw_x_pos_two,y_pos_two)
+    # pendown()
+    # color('black')
+    # begin_fill()
+    # triangle(5)
+    # end_fill()
+    # penup()
 
-    #bag
-    color(outline,cb_bag)
-    goto(draw_x_pos_two,draw_y_pos_three)
-    pendown()
-    begin_fill()
-    setheading(0)
-    left(75)
-    forward(cb_bag_height)
-    setheading(0)
-    forward(cb_bag_width)
-    right(75)
-    forward(cb_bag_height)
-    goto(draw_x_pos_two,draw_y_pos_three)
-    end_fill()
-    penup()
+    # #bag
+    # color(outline,cb_bag)
+    # goto(draw_x_pos_two,draw_y_pos_three)
+    # pendown()
+    # begin_fill()
+    # setheading(0)
+    # left(75)
+    # forward(cb_bag_height)
+    # setheading(0)
+    # forward(cb_bag_width)
+    # right(75)
+    # forward(cb_bag_height)
+    # goto(draw_x_pos_two,draw_y_pos_three)
+    # end_fill()
+    # penup()
 
-    #eyes
-    goto(dot_x_pos_one,dot_y_pos_one)
-    dot(15,outline)
-    goto(dot_x_pos_two,dot_y_pos_one)
-    dot(15,outline)
+    # #eyes
+    # goto(dot_x_pos_one,dot_y_pos_one)
+    # dot(15,outline)
+    # goto(dot_x_pos_two,dot_y_pos_one)
+    # dot(15,outline)
     
 
 
@@ -439,15 +444,52 @@ def track_entities(replace_me):
     left(90)
     forward(40)
     left(90)
-    forward(cell_size/3)
-    right(90)
-    circle(cell_size/3,-180)
-    forward(cell_size/3)
+    forward(cell_size/4)
+    left(90)
+    setheading(90)
+    circle(cell_size/4,-180)
+    setheading(180)
+    forward(cell_size/4)
     left(90)
     forward(40)
     end_fill()
+    penup()
 
     #body
+    goto(snoopy_x_one,snoopy_y_one)
+    pendown()
+    begin_fill()
+    color(outline, 'white')
+    #circle(cell_size/5)
+    ellipse(cell_size/5,135)
+    end_fill()
+    penup()
+
+    # #arms
+    # setheading(180)
+    # begin_fill()
+    # color(outline,'white')
+    # pendown()
+    # forward(20)
+    # right(90)
+    # circle(5)
+    # right(45)
+    # circle(5)
+    # right(45)
+    # circle(5)
+    # setheading(0)
+    # forward(20)
+    # penup()
+    # end_fill()
+
+    #head
+    goto(snoopy_x_two,snoopy_y_two)
+    begin_fill()
+    pendown()
+    color(outline,'white')
+    ellipse(cell_size/3,0)
+    end_fill()
+    penup()
 
 
     #-----------snoopy two----------#
