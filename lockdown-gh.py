@@ -217,6 +217,8 @@ def track_entities(replace_me):
     snoopy = 'white'
     ws = 'yellow'
     tear = '#ADD8E6'
+    snoopy_hat = '#8B4513'
+    goggles = '#3c4d03'
     
     #-------initialising-----------#
     width(3)
@@ -281,12 +283,15 @@ def track_entities(replace_me):
     #eye pos
     snoopy_x_five = snoopy_x_two + 10
     snoopy_y_five = snoopy_y_two + 15
+    #hat pos
+    snoopy_hat_x = snoopy_x_two + 12
+    snoopy_hat_y = snoopy_y_two + 25
 
     #snoopy two
     #feet
     ss_x_one = x_pos_two + 75
     #head pos
-    snoopy_x_head = x_pos_two + 30
+    snoopy_x_head = x_pos_two + 29
     snoopy_y_head = y_pos_two + 63
     #woodstock
     w_x = x_pos_two + 55
@@ -313,6 +318,8 @@ def track_entities(replace_me):
         #cb two
     cb_bag_height = 65
     cb_bag_width = 35
+    #snoopy one
+    snoopy_hat_rad = 20
     #snoopy two
     snoopy_foot = cell_size/5.5
     w_size = 20
@@ -359,6 +366,7 @@ def track_entities(replace_me):
     def hair(num,x,y):
         for i in range(num):
             goto(x,y)
+            forward(10)
             angle = randint(45,55)
             setheading(angle)
             forward(40)
@@ -634,7 +642,33 @@ def track_entities(replace_me):
         end_fill()
         penup()
 
+        #hat
+        goto(snoopy_hat_x,snoopy_hat_y)
+        color(outline,snoopy_hat)
+        pendown()
+        begin_fill()
+        setheading(-115)
+        circle(snoopy_hat_rad,-180)
+        goto(snoopy_hat_x,snoopy_hat_y)
+        penup()
+        end_fill()
+
+        #eye googles
+        goto(snoopy_hat_x+15,snoopy_hat_y+3)
+        color(outline)
+        dot(12)
+        goto(snoopy_hat_x+15,snoopy_hat_y+3)
+        color(goggles)
+        dot(8)
+        setheading(-25)
+        width(5)
+        pendown()
+        forward(25)
+        penup()
+
         #eye
+        color(outline)
+        width(3)
         goto(snoopy_x_five,snoopy_y_five)
         dot(6)
 
@@ -767,20 +801,38 @@ def track_entities(replace_me):
         pendown()
         begin_fill()
         color(outline,ws)
-        circle(w_size/2)
+        circle(w_size/2.2)
         end_fill()
         penup()
-        
-        #hair
+
+        #triangle
+        goto(w_x+23,w_y+23)
         pendown()
-        hair(3,w_x,w_y)
+        begin_fill()
+        color(outline,ws)
+        left(-60)
+        forward(20)
+        right(-105)
+        forward(20)
+        end_fill()
         penup()
+
+        #eye
+        goto(w_x-1,w_y+15)
+        setheading(0)
+        forward(15)
+        pendown()
+        color(outline)
+        dot(5)
+
+
 
 #calling drawing functions
     #charlie_brown_one()
     #charlie_brown_two()
-    #snoopy_one()
-    snoopy_two()
+    snoopy_one()
+    #snoopy_two()
+    
 
 
 #
