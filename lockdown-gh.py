@@ -267,6 +267,17 @@ def track_entities(replace_me):
     dot_x_pos_one = x_pos_one + 30
     dot_y_pos_one = y_pos_two + 65
     dot_x_pos_two = dot_x_pos_one + 20
+    #bubble
+    bubble_x = x_pos_one + 60
+    bubble_y = y_pos_two +60
+    #sad eye
+    sad_eye_x = bubble_x + 14
+    sad_eye_y = bubble_y + 10
+    sad_eye_x_2 = sad_eye_x + 10
+    #sad mouth
+    sad_mouth_x = bubble_x + 12
+    sad_mouth_y = bubble_y - 5
+
 
     #snoopy one
     snoopy_x_one = x_pos_two + 65
@@ -363,13 +374,13 @@ def track_entities(replace_me):
             left(90)
         end_fill()
 
-    def hair(num,x,y):
-        for i in range(num):
-            goto(x,y)
-            forward(10)
-            angle = randint(45,55)
-            setheading(angle)
-            forward(40)
+    # def hair(num,x,y):
+    #     for i in range(num):
+    #         goto(x,y)
+    #         forward(10)
+    #         angle = randint(45,55)
+    #         setheading(angle)
+    #         forward(40)
             
 
     # #-----------drawing functions-----------#
@@ -554,6 +565,41 @@ def track_entities(replace_me):
         dot(15,outline)
         goto(dot_x_pos_two,dot_y_pos_one)
         dot(15,outline)
+
+        #speech bubble
+        goto(bubble_x,bubble_y)
+        color(outline,snoopy)
+        pendown()
+        begin_fill()
+        circle(20)
+        end_fill()
+        penup()
+
+            #triangle
+        goto(bubble_x,bubble_y)
+        color(outline,snoopy)
+        pendown()
+        begin_fill()
+        setheading(275)
+        right(60)
+        forward(15)
+        right(210)
+        forward(15)
+        end_fill()
+        penup()
+
+        #sad face
+        goto(sad_eye_x,sad_eye_y)
+        color(outline)
+        dot(5)
+        goto(sad_eye_x_2,sad_eye_y)
+        dot(5)
+        #mouth
+        goto(sad_mouth_x,sad_mouth_y)
+        pendown()
+        setheading(-90)
+        circle(cb_head_rad/5,-180)
+        penup()
     
     #-----------snoopy one----------#
 
@@ -600,7 +646,7 @@ def track_entities(replace_me):
         goto(snoopy_x_four,snoopy_y_four)
         forward(10)
         pendown()
-        rectangle(15,5,snoopy,180)
+        rectangle(15,7,snoopy,180)
         penup()
 
         #head
@@ -802,6 +848,7 @@ def track_entities(replace_me):
         begin_fill()
         color(outline,ws)
         circle(w_size/2.2)
+        goto(w_x,w_y)
         end_fill()
         penup()
 
@@ -828,10 +875,10 @@ def track_entities(replace_me):
 
 
 #calling drawing functions
-    #charlie_brown_one()
-    #charlie_brown_two()
+    charlie_brown_one()
+    charlie_brown_two()
     snoopy_one()
-    #snoopy_two()
+    snoopy_two()
     
 
 
