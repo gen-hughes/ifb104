@@ -531,7 +531,7 @@ def track_entities(replace_me):
         goto(x_left,y_bottom)
         pendown()
         pendown()
-        square(cell_size, box_two, '"We keep losing \nbecause of me.\nI want to die."')
+        square(cell_size, box_two, "Our baseball season starts today and we haven't lost yet!")
         penup()
 
         #body (same design but red)
@@ -610,284 +610,284 @@ def track_entities(replace_me):
         circle(cb_head_rad/5,-180)
         penup()
     
-    #-----------snoopy one----------#
+#     #-----------snoopy one----------#
 
-    def snoopy_one():
-        #third square
-        goto(x_right,y_top)
-        pendown()
-        square(cell_size, box_three, '"Off I go!\nThe sky is the \nlimit for me!"')
-        penup()
-
-
-        #body
-        goto(snoopy_x_one,snoopy_y_one)
-        pendown()
-        begin_fill()
-        color(outline, snoopy)
-        ellipse(cell_size/4,45,90)
-        end_fill()
-        penup()
-
-        #plane
-        goto(x_right,y_top)
-        pendown()
-        setheading(0)
-        begin_fill()
-        color(outline,plane)
-        forward(cell_size)
-        left(90)
-        forward(40)
-        left(90)
-        forward(cell_size/4)
-        left(90)
-        setheading(90)
-        circle(cell_size/4,-180)
-        setheading(180)
-        forward(cell_size/4)
-        left(90)
-        forward(40)
-        end_fill()
-        penup()
-
-        #arm
-        setheading(180)
-        goto(snoopy_x_four,snoopy_y_four)
-        forward(10)
-        pendown()
-        rectangle(15,7,snoopy,180)
-        penup()
-
-        #head
-        goto(snoopy_x_two,snoopy_y_two)
-        begin_fill()
-        pendown()
-        color(outline,snoopy)
-        ellipse(cell_size/3.5,-45,90)
-        end_fill()
-        penup()
-
-        #nose
-        goto(snoopy_x_two,snoopy_y_two)
-        setheading(90)
-        forward(10)
-        setheading(180)
-        forward(10)
-        color(outline)
-        dot(15)
-        forward(3)
-        color(snoopy)
-        dot(5)
-
-        #ear
-        goto(snoopy_x_three,snoopy_y_three)
-        pendown()
-        begin_fill()
-        color(outline, snoopy)
-        ellipse(cell_size/7,45,90)
-        end_fill()
-        penup()
-
-        #inner ear
-        goto(snoopy_x_three,snoopy_y_three)
-        pendown()
-        begin_fill()
-        color(outline,outline)
-        ellipse(cell_size/9,45,90)
-        end_fill()
-        penup()
-
-        #hat
-        goto(snoopy_hat_x,snoopy_hat_y)
-        color(outline,snoopy_hat)
-        pendown()
-        begin_fill()
-        setheading(-115)
-        circle(snoopy_hat_rad,-180)
-        goto(snoopy_hat_x,snoopy_hat_y)
-        penup()
-        end_fill()
-
-        #eye googles
-        goto(snoopy_hat_x+15,snoopy_hat_y+3)
-        color(outline)
-        dot(12)
-        goto(snoopy_hat_x+15,snoopy_hat_y+3)
-        color(goggles)
-        dot(8)
-        setheading(-25)
-        width(5)
-        pendown()
-        forward(25)
-        penup()
-
-        #eye
-        color(outline)
-        width(3)
-        goto(snoopy_x_five,snoopy_y_five)
-        dot(6)
-
-    #-----------snoopy two----------#
-    def snoopy_two():
-        #fourth square
-        goto(x_right,y_bottom)
-        pendown()
-        square(cell_size, box_four, '"Oh Woodstock, \nmy plane is all\ncrashed!"')
-        penup()
-
-        #leg
-        goto(feet_x_one+3,y_bottom+15)
-        pendown()
-        rectangle(50,15,snoopy,-180)
-        penup()
-
-        #body
-        goto(x_right+50,y_bottom+5)
-        setheading(0)
-        pendown()
-        begin_fill()
-        color(outline,snoopy)
-        ellipse(cell_size/2.7,50,80)
-        end_fill()
-        penup()
-
-        #black part
-        goto(x_right+15,y_bottom+5)
-        setheading(120)
-        pendown()
-        begin_fill()
-        color(outline)
-        circle(-cell_size/2.7,50)
-
-        goto(x_right+15,y_bottom+5)
-        setheading(60)
-        pendown()
-        begin_fill()
-        circle(cell_size/3, 65)
-        end_fill()
-        penup()
+#     def snoopy_one():
+#         #third square
+#         goto(x_right,y_top)
+#         pendown()
+#         square(cell_size, box_three)
+#         penup()
 
 
-        #foot
-        goto(feet_x_one,y_bottom)
-        pendown()
-        setheading(5)
-        begin_fill()
-        color(outline,snoopy)
-        circle(snoopy_foot,180)
-        end_fill()
-        goto(feet_x_one,y_bottom+15)
-        penup()
-        #foot line
-        goto(feet_x_one,y_bottom)
-        pendown()
-        setheading(5)
-        circle(snoopy_foot,90)
-        left(85)
-        forward(10)
-        penup()
-        #foot line 2
-        goto(feet_x_one,y_bottom)
-        pendown()
-        setheading(5)
-        circle(snoopy_foot,130)
-        left(70)
-        forward(10)
-        penup()
+#         #body
+#         goto(snoopy_x_one,snoopy_y_one)
+#         pendown()
+#         begin_fill()
+#         color(outline, snoopy)
+#         ellipse(cell_size/4,45,90)
+#         end_fill()
+#         penup()
 
-        #head
-        goto(snoopy_x_head,snoopy_y_head)
-        begin_fill()
-        pendown()
-        color(outline,snoopy)
-        ellipse(cell_size/3,-60,90)
-        end_fill()
-        penup()
+#         #plane
+#         goto(x_right,y_top)
+#         pendown()
+#         setheading(0)
+#         begin_fill()
+#         color(outline,plane)
+#         forward(cell_size)
+#         left(90)
+#         forward(40)
+#         left(90)
+#         forward(cell_size/4)
+#         left(90)
+#         setheading(90)
+#         circle(cell_size/4,-180)
+#         setheading(180)
+#         forward(cell_size/4)
+#         left(90)
+#         forward(40)
+#         end_fill()
+#         penup()
 
-        #arm
-        goto(snoopy_x_arm,snoopy_y_arm)
-        pendown()
-        rectangle(30,10,snoopy,-45)
-        penup()
+#         #arm
+#         setheading(180)
+#         goto(snoopy_x_four,snoopy_y_four)
+#         forward(10)
+#         pendown()
+#         rectangle(15,7,snoopy,180)
+#         penup()
 
-        #nose
-        goto(snoopy_x_head,snoopy_y_head)
-        setheading(90)
-        forward(10)
-        setheading(-15)
-        forward(55)
-        color(outline)
-        dot(15)
-        forward(3)
-        color(snoopy)
-        dot(5)
+#         #head
+#         goto(snoopy_x_two,snoopy_y_two)
+#         begin_fill()
+#         pendown()
+#         color(outline,snoopy)
+#         ellipse(cell_size/3.5,-45,90)
+#         end_fill()
+#         penup()
 
-        #ear
-        goto(snoopy_x_ear,snoopy_y_ear)
-        pendown()
-        begin_fill()
-        color(outline, snoopy)
-        ellipse(cell_size/5,30,90)
-        end_fill()
-        penup()
+#         #nose
+#         goto(snoopy_x_two,snoopy_y_two)
+#         setheading(90)
+#         forward(10)
+#         setheading(180)
+#         forward(10)
+#         color(outline)
+#         dot(15)
+#         forward(3)
+#         color(snoopy)
+#         dot(5)
 
-        #inner ear
-        goto(snoopy_x_ear,snoopy_y_ear)
-        pendown()
-        begin_fill()
-        color(outline,outline)
-        ellipse(cell_size/6,30,90)
-        end_fill()
-        penup()
+#         #ear
+#         goto(snoopy_x_three,snoopy_y_three)
+#         pendown()
+#         begin_fill()
+#         color(outline, snoopy)
+#         ellipse(cell_size/7,45,90)
+#         end_fill()
+#         penup()
 
-        #eye
-        goto(snoopy_x_eye,snoopy_y_eye)
-        dot(6)
-        #tear
-        right(135)
-        forward(5)
-        pendown()
-        color(tear)
-        forward(10)
-        penup()
+#         #inner ear
+#         goto(snoopy_x_three,snoopy_y_three)
+#         pendown()
+#         begin_fill()
+#         color(outline,outline)
+#         ellipse(cell_size/9,45,90)
+#         end_fill()
+#         penup()
 
-        #woodstock
-        goto(w_x,w_y)
-        pendown()
-        begin_fill()
-        color(outline,ws)
-        circle(w_size/2.2)
-        goto(w_x,w_y)
-        end_fill()
-        penup()
+#         #hat
+#         goto(snoopy_hat_x,snoopy_hat_y)
+#         color(outline,snoopy_hat)
+#         pendown()
+#         begin_fill()
+#         setheading(-115)
+#         circle(snoopy_hat_rad,-180)
+#         goto(snoopy_hat_x,snoopy_hat_y)
+#         penup()
+#         end_fill()
 
-        #triangle
-        goto(w_x+23,w_y+23)
-        pendown()
-        begin_fill()
-        color(outline,ws)
-        left(-60)
-        forward(20)
-        right(-105)
-        forward(20)
-        end_fill()
-        penup()
+#         #eye googles
+#         goto(snoopy_hat_x+15,snoopy_hat_y+3)
+#         color(outline)
+#         dot(12)
+#         goto(snoopy_hat_x+15,snoopy_hat_y+3)
+#         color(goggles)
+#         dot(8)
+#         setheading(-25)
+#         width(5)
+#         pendown()
+#         forward(25)
+#         penup()
 
-        #eye
-        goto(w_x-1,w_y+15)
-        setheading(0)
-        forward(15)
-        pendown()
-        color(outline)
-        dot(5)
+#         #eye
+#         color(outline)
+#         width(3)
+#         goto(snoopy_x_five,snoopy_y_five)
+#         dot(6)
+
+#     #-----------snoopy two----------#
+#     def snoopy_two():
+#         #fourth square
+#         goto(x_right,y_bottom)
+#         pendown()
+#         square(cell_size, box_four)
+#         penup()
+
+#         #leg
+#         goto(feet_x_one+3,y_bottom+15)
+#         pendown()
+#         rectangle(50,15,snoopy,-180)
+#         penup()
+
+#         #body
+#         goto(x_right+50,y_bottom+5)
+#         setheading(0)
+#         pendown()
+#         begin_fill()
+#         color(outline,snoopy)
+#         ellipse(cell_size/2.7,50,80)
+#         end_fill()
+#         penup()
+
+#         #black part
+#         goto(x_right+15,y_bottom+5)
+#         setheading(120)
+#         pendown()
+#         begin_fill()
+#         color(outline)
+#         circle(-cell_size/2.7,50)
+
+#         goto(x_right+15,y_bottom+5)
+#         setheading(60)
+#         pendown()
+#         begin_fill()
+#         circle(cell_size/3, 65)
+#         end_fill()
+#         penup()
+
+
+#         #foot
+#         goto(feet_x_one,y_bottom)
+#         pendown()
+#         setheading(5)
+#         begin_fill()
+#         color(outline,snoopy)
+#         circle(snoopy_foot,180)
+#         end_fill()
+#         goto(feet_x_one,y_bottom+15)
+#         penup()
+#         #foot line
+#         goto(feet_x_one,y_bottom)
+#         pendown()
+#         setheading(5)
+#         circle(snoopy_foot,90)
+#         left(85)
+#         forward(10)
+#         penup()
+#         #foot line 2
+#         goto(feet_x_one,y_bottom)
+#         pendown()
+#         setheading(5)
+#         circle(snoopy_foot,130)
+#         left(70)
+#         forward(10)
+#         penup()
+
+#         #head
+#         goto(snoopy_x_head,snoopy_y_head)
+#         begin_fill()
+#         pendown()
+#         color(outline,snoopy)
+#         ellipse(cell_size/3,-60,90)
+#         end_fill()
+#         penup()
+
+#         #arm
+#         goto(snoopy_x_arm,snoopy_y_arm)
+#         pendown()
+#         rectangle(30,10,snoopy,-45)
+#         penup()
+
+#         #nose
+#         goto(snoopy_x_head,snoopy_y_head)
+#         setheading(90)
+#         forward(10)
+#         setheading(-15)
+#         forward(55)
+#         color(outline)
+#         dot(15)
+#         forward(3)
+#         color(snoopy)
+#         dot(5)
+
+#         #ear
+#         goto(snoopy_x_ear,snoopy_y_ear)
+#         pendown()
+#         begin_fill()
+#         color(outline, snoopy)
+#         ellipse(cell_size/5,30,90)
+#         end_fill()
+#         penup()
+
+#         #inner ear
+#         goto(snoopy_x_ear,snoopy_y_ear)
+#         pendown()
+#         begin_fill()
+#         color(outline,outline)
+#         ellipse(cell_size/6,30,90)
+#         end_fill()
+#         penup()
+
+#         #eye
+#         goto(snoopy_x_eye,snoopy_y_eye)
+#         dot(6)
+#         #tear
+#         right(135)
+#         forward(5)
+#         pendown()
+#         color(tear)
+#         forward(10)
+#         penup()
+
+#         #woodstock
+#         goto(w_x,w_y)
+#         pendown()
+#         begin_fill()
+#         color(outline,ws)
+#         circle(w_size/2.2)
+#         goto(w_x,w_y)
+#         end_fill()
+#         penup()
+
+#         #triangle
+#         goto(w_x+23,w_y+23)
+#         pendown()
+#         begin_fill()
+#         color(outline,ws)
+#         left(-60)
+#         forward(20)
+#         right(-105)
+#         forward(20)
+#         end_fill()
+#         penup()
+
+#         #eye
+#         goto(w_x-1,w_y+15)
+#         setheading(0)
+#         forward(15)
+#         pendown()
+#         color(outline)
+#         dot(5)
 
 
 
 # #calling drawing functions
     charlie_brown_one()
     charlie_brown_two()
-    snoopy_one()
-    snoopy_two()
+#     # snoopy_one()
+#     # snoopy_two()
     
 
 
