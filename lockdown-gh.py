@@ -208,7 +208,7 @@ def track_entities(replace_me):
     box_one = '#87CEEB'
     box_two = '#a2f1a2'
     box_three = '#87CEEB'
-    box_four = '#808080'
+    box_four = '#000C66'
     #charlie brown colours
     cb_shirt_one = 'yellow'
     cb_shirt_two = 'red'
@@ -306,6 +306,10 @@ def track_entities(replace_me):
     #hat pos
     snoopy_hat_x = snoopy_x_two + 12
     snoopy_hat_y = snoopy_y_two + 25
+    #star pos
+    star_x_one = x_right + 15
+    star_y_one = y_top + 35
+    star_x_two = star_x_one + 72
 
     #snoopy two
     #feet
@@ -325,6 +329,12 @@ def track_entities(replace_me):
     #arm pos
     snoopy_x_arm = x_right + 40
     snoopy_y_arm = y_bottom + 30
+    #star pos
+    star_x_three = x_right + 10
+    star_y_two = y_bottom + 90
+    star_x_four = x_right + 90
+    star_y_three = y_bottom +93
+    star_y_four = y_bottom +50
 
     #-----------body dimensions-----------#
     #variables
@@ -397,6 +407,23 @@ def track_entities(replace_me):
             forward(width)
             left(90)
         end_fill()
+
+    def star(x,y,height,outline,colour):
+        goto(x,y)
+        left_turn = 72
+        right_turn = 144
+
+        setheading(-left_turn)
+        color(outline,colour)
+        pendown()
+        begin_fill()
+        for i in range(5):
+            forward(height)
+            left(left_turn)
+            forward(height)
+            right(right_turn)
+        end_fill()
+        penup()
 
     #circle function that includes the fill
     def circlefill(x,y,rad,extent,heading,colour):
@@ -623,6 +650,11 @@ def track_entities(replace_me):
         end_fill()
         penup()
 
+        #star
+        star(star_x_one,star_y_one,9,outline,cb_shirt_one)
+        star(star_x_two,star_y_one,9,outline,cb_shirt_one)
+
+
         #arm
         init(snoopy_x_four-10,snoopy_y_four,180)
         rectangle(15,7,snoopy,180)
@@ -790,6 +822,14 @@ def track_entities(replace_me):
         pendown()
         color(outline)
         dot(5)
+        penup()
+
+        #stars
+        star(star_x_three,star_y_two,5,snoopy,snoopy)
+        setheading(-60)
+        star(star_x_four,star_y_three,6,snoopy,snoopy)
+        setheading(45)
+        star(star_x_four,star_y_four,3,snoopy,snoopy)
 
 
 #main program - do top headings and call functions
