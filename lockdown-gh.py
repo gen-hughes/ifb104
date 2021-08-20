@@ -450,7 +450,7 @@ def track_entities(replace_me):
         goto(x,y)
         setheading(heading)
         pendown()
-        pencolor(outline)
+        pencolor(outline) 
 
     def text(x,y,text):
         goto(x,y)
@@ -542,7 +542,7 @@ def track_entities(replace_me):
     #-----------charlie brown two----------#
     def charlie_brown_two():
         #second square
-        square(x_left,y_bottom,cell_size, box_two, '"We keep losing \nbecause of me.\nI want to die."')
+        square(x_left,y_bottom,cell_size, box_two, '"We keep losing \nbecause of me.\nI want to hide."')
         penup()
 
         #body (same design but red)
