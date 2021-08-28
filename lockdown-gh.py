@@ -261,120 +261,120 @@ def track_entities(peanuts_comic):
 
     #---<charlie brown coordinates>---# 
 
-    #<cb head>
-    cb_x_one = x_left + 40
-    cb_y_one = y_top + 30
+    # #<cb head>
+    # cb_x_one = x_left + 40
+    # cb_y_one = y_top + 30
 
-    #<cb body>
-    cb_x_two = x_left + 5
+    # # #<cb body>
+    # cb_x_two = x_left + 5
 
-    #<hat and face coords>
-    cb_x_three = x_left + 75
-    cb_y_two = y_top + 62
+    # #<hat and face coords>
+    # cb_x_three = x_left + 75
+    # cb_y_two = y_top + 62
 
-    #<eye coords>
-    cb_eye_x = x_left + 30
-    cb_eye_y = y_top + 55
+    # #<eye coords>
+    # cb_eye_x = x_left + 30
+    # cb_eye_y = y_top + 55
 
-    #<mouth coords>
-    cb_mouth_x = x_left + 27
-    cb_mouth_y = y_top + 43
+    # #<mouth coords>
+    # cb_mouth_x = x_left + 27
+    # cb_mouth_y = y_top + 43
 
-    #<cb hat>
-    cb_y_three = y_bottom + 30
+    # #<cb hat>
+    # cb_y_three = y_bottom + 30
 
-    #<eyes>
-    cb_eye_x_one = x_left + 30
-    cb_eye_x_two = cb_eye_x_one + 20
+    # #<eyes>
+    # cb_eye_x_one = x_left + 30
+    # cb_eye_x_two = cb_eye_x_one + 20
 
-    cb_eye_y_one = y_bottom + 65
+    # cb_eye_y_one = y_bottom + 65
 
-    #<bubble>
-    bubble_x = x_left + 60
-    bubble_y = y_bottom + 60
+    # #<bubble>
+    # bubble_x = x_left + 60
+    # bubble_y = y_bottom + 60
 
-    #<sad eye>
-    sad_eye_x = bubble_x + 14
-    sad_eye_x_2 = sad_eye_x + 10
+    # #<sad eye>
+    # sad_eye_x = bubble_x + 14
+    # sad_eye_x_2 = sad_eye_x + 10
 
-    sad_eye_y = bubble_y + 10
+    # sad_eye_y = bubble_y + 10
 
-    #<sad mouth>
-    sad_mouth_x = bubble_x + 12
-    sad_mouth_y = bubble_y - 5
+    # #<sad mouth>
+    # sad_mouth_x = bubble_x + 12
+    # sad_mouth_y = bubble_y - 5
 
-    #<collar>
-    cb_x_four = cb_x_two+15
-    cb_x_five = cb_x_four+40
+    # #<collar>
+    # cb_x_four = cb_x_two+15
+    # cb_x_five = cb_x_four+40
 
-    #<ball>
-    ball_x = x_left + 70
+    # #<ball>
+    # ball_x = x_left + 70
 
 
-    #---<snoopy coordinates>---# 
+    # #---<snoopy coordinates>---# 
 
-    #---<snoopy one>---#
-    snoopy_x_one = x_right + 65
-    snoopy_y_one = y_top + 10
+    # #---<snoopy one>---#
+    # snoopy_x_one = x_right + 65
+    # snoopy_y_one = y_top + 10
 
-    #<head pos>
-    snoopy_x_two = x_right + 27
-    snoopy_y_two = y_top + 50
+    # #<head pos>
+    # snoopy_x_two = x_right + 27
+    # snoopy_y_two = y_top + 50
 
-    #<ear pos>
-    snoopy_x_three = snoopy_x_two + 45
-    snoopy_y_three = snoopy_y_two - 5
+    # #<ear pos>
+    # snoopy_x_three = snoopy_x_two + 45
+    # snoopy_y_three = snoopy_y_two - 5
 
-    #<arm pos>
-    snoopy_x_four = snoopy_x_one - 10
-    snoopy_y_four = snoopy_y_one + 25
+    # #<arm pos>
+    # snoopy_x_four = snoopy_x_one - 10
+    # snoopy_y_four = snoopy_y_one + 25
 
-    #<eye pos>
-    snoopy_x_five = snoopy_x_two + 10
-    snoopy_y_five = snoopy_y_two + 15
+    # #<eye pos>
+    # snoopy_x_five = snoopy_x_two + 10
+    # snoopy_y_five = snoopy_y_two + 15
 
-    #<hat pos>
-    snoopy_hat_x = snoopy_x_two + 12
-    snoopy_hat_y = snoopy_y_two + 25
+    # #<hat pos>
+    # snoopy_hat_x = snoopy_x_two + 12
+    # snoopy_hat_y = snoopy_y_two + 25
 
-    #<star pos>
-    star_x_one = x_right + 15
-    star_x_two = star_x_one + 72
+    # #<star pos>
+    # star_x_one = x_right + 15
+    # star_x_two = star_x_one + 72
 
-    star_y_one = y_top + 35
+    # star_y_one = y_top + 35
 
-    #---<snoopy two>---#
+    # #---<snoopy two>---#
 
-    #<feet>
-    feet_x_one = x_right + 75
+    # #<feet>
+    # feet_x_one = x_right + 75
 
-    #<head pos>
-    snoopy_x_head = x_right + 29
-    snoopy_y_head = y_bottom + 63
+    # #<head pos>
+    # snoopy_x_head = x_right + 29
+    # snoopy_y_head = y_bottom + 63
 
-    #<woodstock>
-    w_x = x_right + 55
-    w_y = y_bottom + 20
+    # #<woodstock>
+    # w_x = x_right + 55
+    # w_y = y_bottom + 20
 
-    #<ear>
-    snoopy_x_ear = snoopy_x_head + 10
-    snoopy_y_ear = snoopy_y_head - 10
+    # #<ear>
+    # snoopy_x_ear = snoopy_x_head + 10
+    # snoopy_y_ear = snoopy_y_head - 10
 
-    #<eye pos>
-    snoopy_x_eye = snoopy_x_head + 35
-    snoopy_y_eye = snoopy_y_head + 10
+    # #<eye pos>
+    # snoopy_x_eye = snoopy_x_head + 35
+    # snoopy_y_eye = snoopy_y_head + 10
 
-    #<arm pos>
-    snoopy_x_arm = x_right + 40
-    snoopy_y_arm = y_bottom + 30
+    # #<arm pos>
+    # snoopy_x_arm = x_right + 40
+    # snoopy_y_arm = y_bottom + 30
 
-    #<star pos>
-    star_x_three = x_right + 10
-    star_x_four = x_right + 90
+    # #<star pos>
+    # star_x_three = x_right + 10
+    # star_x_four = x_right + 90
 
-    star_y_two = y_bottom + 90
-    star_y_three = y_bottom +93
-    star_y_four = y_bottom +50
+    # star_y_two = y_bottom + 90
+    # star_y_three = y_bottom +93
+    # star_y_four = y_bottom +50
 
 
     #-----------<body dimensions>-----------#
@@ -399,7 +399,7 @@ def track_entities(peanuts_comic):
 
     #<square function for the large drawing squares>
         #simplifying multiple lines into one (including initialising heading, pendown, begin and end fill etc.)
-    def square(x,y,length,colour,text):
+    def square(x,y,length,colour):
         #initialise steps
         goto(x,y)
         pendown()
@@ -412,8 +412,13 @@ def track_entities(peanuts_comic):
             left(90)
         end_fill()
         penup()
-        #write the text
-        right(90)
+        
+    #write the text
+    def boxtext(x,y,text):
+        goto(x,y)
+        setheading(180)
+        color(outline)
+        left(90)
         forward(60)
         write(text, font=('Arial',12, 'bold'))
         setheading(0)
@@ -510,49 +515,49 @@ def track_entities(peanuts_comic):
     # #-----------drawing functions-----------#
     # #-------charlie brown one------#
 
-    def charlie_brown_one():
+    def charlie_brown_one(x,y):
         ##first square
-        square(x_left,y_top,cell_size, box_one,'"The baseball \nseason starts \ntoday!"')
+        square(x,y,cell_size, box_one)
 
         #mound
         right(90)
-        circlefill(x_left,y_top,cell_size/2,-180,-90,grass)
+        circlefill(x,y,cell_size/2,-180,-90,grass)
 
         #charlie body
-        charliebody(cb_x_two,y_top,cb_body_rad,-180,cb_shirt_one)
-        triangle(cb_x_two,y_top,5)
+        charliebody(x+5,y,cb_body_rad,-180,cb_shirt_one)
+        triangle(x+5,y,5)
 
         #head
-        circlefill(cb_x_one,cb_y_one,cb_head_rad,360,0,cb_body)
+        circlefill(x+40,y+30,cb_head_rad,360,0,cb_body)
 
         #hat
-        circlefill(cb_x_three,cb_y_two,cb_hat_rad,180,90,cb_hat)
+        circlefill(x+75,y+62,cb_hat_rad,180,90,cb_hat)
 
         #hat flat line
-        init(cb_x_three-(cb_hat_rad*2),cb_y_two,0)
+        init((x+75)-(cb_hat_rad*2),y+62,0)
         width(3)
         forward(cb_hat_rad*2+20)
         penup()
 
         #hat stripe right - go backwards from front of hat and make a curve to top of hat
-        init(cb_x_three-15,cb_y_two,90)
+        init(x+60,y+62,90)
         circle(cb_hat_rad,70)
         penup()
 
         #hat stripe left  - go backwards from front of hat and make a curve to top of hat (opposite of top one)
-        init(cb_x_three-55,cb_y_two,90)
+        init(x+20,y+62,90)
         circle(-cb_hat_rad,70)
         penup()
 
         #hat stripe middle
-        init(cb_x_three-35,cb_y_two,0)
+        init(x+40,y+62,0)
         left(90)
         forward(35)
         penup()
 
         #eyes and nose
             #eye 1
-        init(cb_eye_x,cb_eye_y,-180)
+        init(x+30,y+55,-180)
         dot(7)
         penup()
             #nose
@@ -564,12 +569,12 @@ def track_entities(peanuts_comic):
         circle(5,180)
         penup()
             #eye 2
-        init(cb_eye_x+22,cb_eye_y,0)
+        init(x+52,y+55,0)
         dot(7)
         penup()
 
         #mouth (using init here makes weird things happen)
-        goto(cb_mouth_x,cb_mouth_y)
+        goto(x+27,y+43)
         pendown()
         forward(3)
         setheading(-70)
@@ -579,7 +584,7 @@ def track_entities(peanuts_comic):
         penup()
 
         #ball
-        circlefill(ball_x,y_top,12,360,0,snoopy)
+        circlefill(x+70,y,12,360,0,snoopy)
         #ball lines to make it more realistic
         pendown()
         circle(12,90)
@@ -590,17 +595,17 @@ def track_entities(peanuts_comic):
         penup()
 
     #-----------<charlie brown two>----------#
-    def charlie_brown_two():
+    def charlie_brown_two(x,y):
         #<second square>
-        square(x_left,y_bottom,cell_size, box_two, '"We keep losing \nbecause of me.\nI want to hide."')
+        square(x,y,cell_size, box_two)
         penup()
 
         #<body (same design but red)>
-        charliebody(cb_x_two,y_bottom,cb_body_rad,-180,cb_shirt_two)
-        triangle(cb_x_two,y_bottom,5)
+        charliebody(x+5,y,cb_body_rad,-180,cb_shirt_two)
+        triangle(x+5,y,5)
 
         #<bag>
-        init(cb_x_two,cb_y_three,0)
+        init(x+5,y+30,0)
         fillcolor(cb_bag)
         begin_fill()
         left(75)
@@ -609,18 +614,18 @@ def track_entities(peanuts_comic):
         forward(cb_bag_width)
         right(75)
         forward(cb_bag_height)
-        goto(cb_x_two,cb_y_three)
+        goto(x+5,y+30)
         end_fill()
         penup()
 
         #<eyes>
-        goto(cb_eye_x_one,cb_eye_y_one)
+        goto(x+30,y+65)
         dot(15,outline)
-        goto(cb_eye_x_two,cb_eye_y_one)
+        goto(x+50,y+65)
         dot(15,outline)
 
         #<speech bubble> - circlefill goes weird here
-        goto(bubble_x,bubble_y)
+        goto(x+60,y+60)
         color(outline,snoopy)
         pendown()
         begin_fill()
@@ -629,7 +634,7 @@ def track_entities(peanuts_comic):
         penup()
 
         #<triangle of speech bubble>
-        init(bubble_x,bubble_y,275)
+        init(x+60,y+60,275)
         color(outline,snoopy)
         begin_fill()
         right(60)
@@ -640,48 +645,48 @@ def track_entities(peanuts_comic):
         penup()
 
         #<sad face>
-        init(sad_eye_x,sad_eye_y,0)
+        init(x+74,y+70,0)
         dot(5)
         penup()
-        goto(sad_eye_x_2,sad_eye_y)
+        goto(x+84,y+70)
         dot(5)
         #<mouth>
-        init(sad_mouth_x,sad_mouth_y,-90)
+        init(x+72,y+55,-90)
         circle(cb_head_rad/5,-180)
         penup()
 
         #<neck>
-        init(cb_x_four,cb_y_three,0)
+        init(x+20,y+30,0)
         begin_fill()
         right(30)
         color(outline,cb_body)
         forward(23)
         left(60)
         forward(23)
-        goto(cb_x_four,cb_y_three)
+        goto(x+20,y+30)
         end_fill()
 
         #<collar>
-        goto(cb_x_four,cb_y_three)
+        goto(x+20,y+30)
         rectangle(23,-4,cb_shirt_two,-30)
-        goto(cb_x_five,cb_y_three)
+        goto(x+60,y+30)
         rectangle(-23,-4,cb_shirt_two,30)
         penup()
     
     #-----------<snoopy one>----------#
 
-    def snoopy_one():
+    def snoopy_one(x,y):
         #<third square>
-        square(x_right,y_top,cell_size, box_three, '"Off I go!\nThe sky is the \nlimit for me!"')
+        square(x,y,cell_size, box_three)
         penup()
 
         #<body>
-        init(snoopy_x_one,snoopy_y_one,0)
+        init(x+65,y+10,0)
         ellipse(cell_size/4,45,90,snoopy)
         penup()
 
         #<plane>
-        init(x_right,y_top,0)
+        init(x,y,0)
         begin_fill()
         color(outline,plane)
         forward(cell_size)
@@ -701,21 +706,21 @@ def track_entities(peanuts_comic):
         penup()
 
         #<star>
-        star(star_x_one,star_y_one,9,outline,cb_shirt_one)
-        star(star_x_two,star_y_one,9,outline,cb_shirt_one)
+        star(x+15,y+35,9,outline,cb_shirt_one)
+        star(x+87,y+35,9,outline,cb_shirt_one)
 
         #<arm>
-        init(snoopy_x_four-10,snoopy_y_four,180)
+        init(x+45,y+35,180)
         rectangle(15,7,snoopy,180)
         penup()
 
         #<head>
-        init(snoopy_x_two,snoopy_y_two,0)
+        init(x+27,y+50,0)
         ellipse(cell_size/3.5,-45,90,snoopy)
         penup()
 
         #<nose> - moving to position so don't use init
-        goto(snoopy_x_two,snoopy_y_two)
+        goto(x+27,y+50)
         setheading(90)
         forward(10)
         setheading(180)
@@ -727,25 +732,25 @@ def track_entities(peanuts_comic):
         dot(5)
 
         #<ear>
-        init(snoopy_x_three,snoopy_y_three,0)
+        init(x+72,y+45,0)
         ellipse(cell_size/7,45,90,snoopy)
         penup()
 
         #<inner ear>
-        init(snoopy_x_three,snoopy_y_three,0)
+        init(x+72,y+45,0)
         ellipse(cell_size/9,45,90,outline)
         penup()
 
         #<hat>
-        circlefill(snoopy_hat_x,snoopy_hat_y,snoopy_hat_rad,-180,-115,snoopy_hat)
+        circlefill(x+39,y+75,snoopy_hat_rad,-180,-115,snoopy_hat)
         pendown()
-        goto(snoopy_hat_x,snoopy_hat_y)
+        goto(x+39,y+75)
         penup()
 
         #<eye googles>
-        init(snoopy_hat_x+15,snoopy_hat_y+3,0)
+        init(x+54,y+78,0)
         dot(12)
-        goto(snoopy_hat_x+15,snoopy_hat_y+3)
+        goto(x+54,y+78)
         color(goggles)
         dot(8)
         setheading(-25)
@@ -756,61 +761,61 @@ def track_entities(peanuts_comic):
 
         #<eye>
         width(3)
-        init(snoopy_x_five,snoopy_y_five,0)
+        init(x+37,y+65,0)
         dot(6)
         penup()
 
     #-----------<snoopy two>----------#
-    def snoopy_two():
+    def snoopy_two(x,y):
         #<fourth square>
-        square(x_right,y_bottom,cell_size, box_four, '"Oh Woodstock,\nmy plane has\ncrashed!"')
+        square(x,y,cell_size, box_four)
 
         #<leg>
-        init(feet_x_one+3,y_bottom+15,0)
+        init(x+78,y+15,0)
         rectangle(50,15,snoopy,-180)
         penup()
 
         #<body>
-        init(x_right+50,y_bottom+5,0)
+        init(x+50,y+5,0)
         ellipse(cell_size/2.7,50,80,snoopy)
         penup()
 
         #<black part>
-        circlefill(x_right+16,y_bottom+5,-cell_size/2.7,50,120,outline)
-        circlefill(x_right+15,y_bottom+5,cell_size/3,65,60,outline)
+        circlefill(x+16,y+5,-cell_size/2.7,50,120,outline)
+        circlefill(x+15,y+5,cell_size/3,65,60,outline)
 
         #<foot>
-        circlefill(feet_x_one,y_bottom,snoopy_foot,180,5,snoopy)
+        circlefill(x+75,y,snoopy_foot,180,5,snoopy)
         pendown()
-        goto(feet_x_one,y_bottom+15)
+        goto(x+75,y+15)
         penup()
 
         #<foot line 1>
-        init(feet_x_one,y_bottom,5)
+        init(x+75,y,5)
         circle(snoopy_foot,90)
         left(85)
         forward(10)
         penup()
 
         #<foot line 2>
-        init(feet_x_one,y_bottom,5)
+        init(x+75,y,5)
         circle(snoopy_foot,130)
         left(70)
         forward(10)
         penup()
 
         #<head>
-        init(snoopy_x_head,snoopy_y_head,0)
+        init(x+29,y+63,0)
         ellipse(cell_size/3,-60,90,snoopy)
         penup()
 
         #<arm>
-        init(snoopy_x_arm,snoopy_y_arm,0)
+        init(x+40,y+30,0)
         rectangle(30,10,snoopy,-45)
         penup()
 
         #<nose>
-        init(snoopy_x_head,snoopy_y_head,90)
+        init(x+29,y+63,90)
         penup()
         forward(10)
         setheading(-15)
@@ -822,17 +827,17 @@ def track_entities(peanuts_comic):
         dot(5)
 
         #<ear>
-        init(snoopy_x_ear,snoopy_y_ear,0)
+        init(x+39,y+53,0)
         ellipse(cell_size/5,30,90,snoopy)
         penup()
 
         #<inner ear>
-        init(snoopy_x_ear,snoopy_y_ear,0)
+        init(x+39,y+53,0)
         ellipse(cell_size/6,30,90,outline)
         penup()
 
         #<eye>
-        goto(snoopy_x_eye,snoopy_y_eye)
+        goto(x+64,y+73)
         dot(6)
 
         #<tear>
@@ -844,17 +849,17 @@ def track_entities(peanuts_comic):
         penup()
 
         #<woodstock> - doesn't like the circlefill function, causes placement issues so don't use it here
-        goto(w_x,w_y)
+        goto(x+55,y+20)
         pendown()
         begin_fill()
         color(outline,ws)
         circle(w_size/2.2)
-        goto(w_x,w_y)
+        goto(x+55,y+20)
         end_fill()
         penup()
 
         #<triangle> - init causes placement issues - setheading needs to be a correct way leading on from previous code
-        goto(w_x+23,w_y+23)
+        goto(x+78,y+43)
         pendown()
         begin_fill()
         color(outline,ws)
@@ -862,12 +867,12 @@ def track_entities(peanuts_comic):
         forward(20)
         right(-105)
         forward(20)
-        goto(w_x+23,w_y+23)
+        goto(x+78,y+43)
         end_fill()
         penup()
 
         #<eye> - init can't be used same thing as above
-        goto(w_x-1,w_y+15)
+        goto(x+54,y+35)
         setheading(0)
         forward(15)
         pendown()
@@ -876,23 +881,29 @@ def track_entities(peanuts_comic):
         penup()
 
         #<stars>
-        star(star_x_three,star_y_two,5,snoopy,snoopy)
+        star(x+10,y+90,5,snoopy,snoopy)
         setheading(-60)
-        star(star_x_four,star_y_three,6,snoopy,snoopy)
+        star(x+90,y+93,6,snoopy,snoopy)
         setheading(45)
-        star(star_x_four,star_y_four,3,snoopy,snoopy)
+        star(x+90,y+50,3,snoopy,snoopy)
 
 
 #-------<main program>-------------#
     #do top headings and call functions
-    text(x_left,text_y,'Charlie \nBrown')
-    charlie_brown_one()
-    charlie_brown_two()
-    text(x_right,text_y,'Snoopy\n')
-    snoopy_one()
-    snoopy_two()
-    
+    # text(x_left,text_y,'Charlie \nBrown')
+    # charlie_brown_one(x_left,y_top)
+    # boxtext(x_left,y_top, '"The baseball \nseason starts \ntoday!"')
+    # charlie_brown_two(x_left,y_bottom)
+    # boxtext(x_left,y_bottom,'"We keep losing \nbecause of me.\nI want to hide."')
+    # text(x_right,text_y,'Snoopy\n')
+    # snoopy_one(x_right,y_top)
+    # boxtext(x_right,y_top, '"Off I go!\nThe sky is the \nlimit for me!"')
+    # snoopy_two(x_right,y_bottom)
+    # boxtext(x_right,y_bottom,'"Oh Woodstock,\nmy plane has\ncrashed!"')
 
+    #drawing them in the squares
+    state = actions[0]
+    print(state)
 
 #
 #--------------------------------------------------------------------#
