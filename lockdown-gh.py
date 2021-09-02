@@ -890,20 +890,27 @@ def track_entities(peanuts_comic):
 
 #-------<main program>-------------#
     #do top headings and call functions
-    # text(x_left,text_y,'Charlie \nBrown')
-    # charlie_brown_one(x_left,y_top)
-    # boxtext(x_left,y_top, '"The baseball \nseason starts \ntoday!"')
-    # charlie_brown_two(x_left,y_bottom)
-    # boxtext(x_left,y_bottom,'"We keep losing \nbecause of me.\nI want to hide."')
-    # text(x_right,text_y,'Snoopy\n')
-    # snoopy_one(x_right,y_top)
-    # boxtext(x_right,y_top, '"Off I go!\nThe sky is the \nlimit for me!"')
-    # snoopy_two(x_right,y_bottom)
-    # boxtext(x_right,y_bottom,'"Oh Woodstock,\nmy plane has\ncrashed!"')
+    text(x_left,text_y,'Charlie \nBrown')
+    charlie_brown_one(x_left,y_top)
+    boxtext(x_left,y_top, '"The baseball \nseason starts \ntoday!"')
+    charlie_brown_two(x_left,y_bottom)
+    boxtext(x_left,y_bottom,'"We keep losing \nbecause of me.\nI want to hide."')
+    text(x_right,text_y,'Snoopy\n')
+    snoopy_one(x_right,y_top)
+    boxtext(x_right,y_top, '"Off I go!\nThe sky is the \nlimit for me!"')
+    snoopy_two(x_right,y_bottom)
+    boxtext(x_right,y_bottom,'"Oh Woodstock,\nmy plane has\ncrashed!"')
 
     #drawing them in the squares
     state = actions[0]
     print(state)
+
+    #take the first part of list and if statement to see if healthy and unwell, and then draw that in the home square for both
+    #cycle through the next parts and use if loop to draw them across
+    #use getpos() to check it
+    #if x goes past the set position or y then don't draw or change to different position
+
+    #problems - don't know how to cycle through things
 
 #
 #--------------------------------------------------------------------#
