@@ -200,7 +200,6 @@ def release_drawing_canvas(hide_cursor = True):
 # All of your code goes in, or is called from, this function
 def track_entities(actions):
 
-    print(actions)
     #-----------<variables>----------------#
 
     #------------<defining colours used in program>--------------#
@@ -774,19 +773,34 @@ def track_entities(actions):
 
 #-------<main program>-------------#
     #do top headings and call functions
-    text(x_left,text_y,'Charlie \nBrown')
-    charlie_brown_one(x_left,y_top)
-    boxtext(x_left,y_top, '"The baseball \nseason starts \ntoday!"')
-    charlie_brown_two(x_left,y_bottom)
-    boxtext(x_left,y_bottom,'"We keep losing \nbecause of me.\nI want to hide."')
-    text(x_right,text_y,'Snoopy\n')
-    snoopy_one(x_right,y_top)
-    boxtext(x_right,y_top, '"Off I go!\nThe sky is the \nlimit for me!"')
-    snoopy_two(x_right,y_bottom)
-    boxtext(x_right,y_bottom,'"Oh Woodstock,\nmy plane has\ncrashed!"')
+    # text(x_left,text_y,'Charlie \nBrown')
+    # charlie_brown_one(x_left,y_top)
+    # boxtext(x_left,y_top, '"The baseball \nseason starts \ntoday!"')
+    # charlie_brown_two(x_left,y_bottom)
+    # boxtext(x_left,y_bottom,'"We keep losing \nbecause of me.\nI want to hide."')
+    # text(x_right,text_y,'Snoopy\n')
+    # snoopy_one(x_right,y_top)
+    # boxtext(x_right,y_top, '"Off I go!\nThe sky is the \nlimit for me!"')
+    # snoopy_two(x_right,y_bottom)
+    # boxtext(x_right,y_bottom,'"Oh Woodstock,\nmy plane has\ncrashed!"')
 
+    #starting pos
+    home_x_left = cell_size*-4
+    home_y = -y_margin
+    home_x_right = cell_size*3
     #drawing them in the squares
 
+    status = actions[0]
+    first_status = status[0]
+    print(first_status)
+    if status[0] == 'Healthy':
+        charlie_brown_one(home_x_left,home_y)
+    elif status[0] == 'Unwell':
+        charlie_brown_two(home_x_left,home_y)
+    if status[1] == 'Healthy':
+        snoopy_one(home_x_right,home_y)
+    elif status[1] == 'Unwell':
+        snoopy_two(home_x_right,home_y)
 
     #take the first part of list and if statement to see if healthy and unwell, and then draw that in the home square for both
     #cycle through the next parts and use if loop to draw them across
@@ -873,7 +887,7 @@ title("Peanuts Comics ft. Charlie Brown and Snoopy")
 # ***** work with "actions()" as the argument to "track_entities",
 # ***** i.e., for any data set that can be returned by
 # ***** calling function "actions" with no seed.
-track_entities(actions(9)) # <-- no argument for "actions" when assessed
+track_entities(actions(165)) # <-- no argument for "actions" when assessed
 
 # Exit gracefully
 # ***** Change the default argument to False if you want the
