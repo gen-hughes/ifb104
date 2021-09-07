@@ -791,17 +791,34 @@ def track_entities(actions):
     #drawing them in the squares
 
     status = actions[0]
-    first_status = status[0]
-    print(first_status)
-    if status[0] == 'Healthy':
-        charlie_brown_one(home_x_left,home_y)
-    elif status[0] == 'Unwell':
-        charlie_brown_two(home_x_left,home_y)
-    if status[1] == 'Healthy':
-        snoopy_one(home_x_right,home_y)
-    elif status[1] == 'Unwell':
-        snoopy_two(home_x_right,home_y)
 
+    # first_status = status[0]
+    # print(first_status)
+    # if status[0] == 'Healthy':
+    #     charlie_brown_one(home_x_left,home_y)
+    # elif status[0] == 'Unwell':
+    #     charlie_brown_two(home_x_left,home_y)
+    # if status[1] == 'Healthy':
+    #     snoopy_one(home_x_right,home_y)
+    # elif status[1] == 'Unwell':
+    #     snoopy_two(home_x_right,home_y)
+    
+    #function to go north south west east
+    #function to check if you go past
+
+    instructions = actions[1]
+    for i in instructions:
+        if i[0] == 'Right entity':
+            if i[1] == 'North':
+                #go north
+                pass
+            elif i[1] == 'South':
+                #go south
+                pass
+            elif i[1] == 'West':
+                #go west
+                pass
+        
     #take the first part of list and if statement to see if healthy and unwell, and then draw that in the home square for both
     #cycle through the next parts and use if loop to draw them across
     #use getpos() to check it
@@ -887,7 +904,7 @@ title("Peanuts Comics ft. Charlie Brown and Snoopy")
 # ***** work with "actions()" as the argument to "track_entities",
 # ***** i.e., for any data set that can be returned by
 # ***** calling function "actions" with no seed.
-track_entities(actions(165)) # <-- no argument for "actions" when assessed
+track_entities(actions(17)) # <-- no argument for "actions" when assessed
 
 # Exit gracefully
 # ***** Change the default argument to False if you want the
