@@ -788,36 +788,95 @@ def track_entities(actions):
     home_x_left = cell_size*-4
     home_y = -y_margin
     home_x_right = cell_size*3
+    move_cell_left= cell_size*-3
+    move_cell_top = -y_margin + cell_size
+    move_cell_right = cell_size*3
+    move_cell_bottom = -y_margin - cell_size
     #drawing them in the squares
 
     status = actions[0]
 
-    # first_status = status[0]
-    # print(first_status)
-    # if status[0] == 'Healthy':
-    #     charlie_brown_one(home_x_left,home_y)
-    # elif status[0] == 'Unwell':
-    #     charlie_brown_two(home_x_left,home_y)
-    # if status[1] == 'Healthy':
-    #     snoopy_one(home_x_right,home_y)
-    # elif status[1] == 'Unwell':
-    #     snoopy_two(home_x_right,home_y)
+    first_status = status[0]
+    print(first_status)
+    if status[0] == 'Healthy':
+        charlie_brown_one(home_x_left,home_y)
+        entity_one = 1
+    elif status[0] == 'Unwell':
+        charlie_brown_two(home_x_left,home_y)
+        entity_one = 2
+    if status[1] == 'Healthy':
+        snoopy_one(home_x_right,home_y)
+        #healthy = snoopy_one()
+        entity_two = 3
+    elif status[1] == 'Unwell':
+        snoopy_two(home_x_right,home_y)
+        #unwell = snoopy_two()
+        entity_two = 4
     
+    def charlie(number,heading,x,y,steps):
+        setheading(heading)
+        if number == 1:
+            for step in range(steps):
+                print(step)
+                if heading == 0:
+                    x = x + cell_size
+                elif heading == 90:
+                    y = y + cell_size
+                # forward(cell_size)
+                # x = int(xcor())
+                # y = int(ycor())
+                print(x)
+                print(y)
+                charlie_brown_one(x,y)
+        # elif number == 2:
+        #     for step in range(steps):
+        #         print(step)
+        #         if heading == 180:
+        #             x = x - cell_size
+        #         elif heading == 270:
+        #             y = y - cell_size
+        #         x = xcor()
+        #         y = ycor()
+        #         charlie_brown_two(x,y)
+    
+    # def snoopy_draw(number,heading,x,y,steps):
+    #     setheading(heading)
+    #     if number == 1:
+    #         for i in steps:
+    #             forward(cell_size)
+    #             snoopy_one(x,y)
+    #     elif number == 2:
+    #         for i in steps:
+    #             forward(cell_size)
+    #             snoopy_two(x,y)
     #function to go north south west east
-    #function to check if you go past
+    #function to check if you go past ^ use that here
 
-    instructions = actions[1]
-    for i in instructions:
-        if i[0] == 'Right entity':
-            if i[1] == 'North':
-                #go north
-                pass
-            elif i[1] == 'South':
-                #go south
-                pass
-            elif i[1] == 'West':
-                #go west
-                pass
+    # charlie(1, 90,home_x_left,home_y,3)
+
+    instructions = actions[1] 
+    for i in range(3):
+        #cycle through list instead of doing it three times
+        if instructions[0] == 'Right entity':
+            if instructions[1] == 'North':
+                charlie(entity_one, 90,home_x_left,home_y,instructions[2])
+            elif instructions[1] == 'South':
+                charlie(entity_one, -90,home_x_left,home_y,instructions[2])
+            elif instructions[1] == 'West':
+                charlie(entity_one, 0,home_x_left,home_y,instructions[2])
+            elif instructions[1] == 'East':
+                charlie(entity_one, 180,home_x_left,home_y,instructions[2])
+    # #     if i[0] == 'Left entity':
+    #         if i[1] == 'North':
+    #             snoopy_draw(entity_two, 90,home_x_right,home_y,i[2])
+    #         elif i[1] == 'South':
+    #             snoopy_draw(entity_two, -90,home_x_right,home_y,i[2])
+    #         elif i[1] == 'West':
+    #             snoopy_draw(entity_two, 0,home_x_right,home_y,i[2])
+    #         elif i[1] == 'East':
+    #             snoopy_draw(entity_two, 180,home_x_right,home_y,i[2])
+
+
         
     #take the first part of list and if statement to see if healthy and unwell, and then draw that in the home square for both
     #cycle through the next parts and use if loop to draw them across
@@ -904,7 +963,7 @@ title("Peanuts Comics ft. Charlie Brown and Snoopy")
 # ***** work with "actions()" as the argument to "track_entities",
 # ***** i.e., for any data set that can be returned by
 # ***** calling function "actions" with no seed.
-track_entities(actions(17)) # <-- no argument for "actions" when assessed
+track_entities(actions(2)) # <-- no argument for "actions" when assessed
 
 # Exit gracefully
 # ***** Change the default argument to False if you want the
